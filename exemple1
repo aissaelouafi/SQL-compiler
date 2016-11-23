@@ -1,0 +1,16 @@
+EXEMPLE SQL 2 :
+CREATE TABLE test ( id NUMBER , name VARCHAR , CONSTRAINT aissa PRIMARY KEY (id), CONSTRAINT mehmoud FOREIGN KEY (id) REFERENCES saber (name))
+
+EXEMPLE SQL 3 :
+CREATE TYPE typeName TYPE AS OBJECT ( id NUMBER, name VARCHAR, dateNaissance DATE) CREATE TABLE test OF typeName (CONSTRAINT aissa PRIMARY KEY (id), CONSTRAINT cstr2 PRIMARY KEY(id2))
+
+EXEMPLE TRADUCTION SQL 3 EN SQL 2 :
+
+  SQL 3 :
+  CREATE TYPE typeName TYPE AS OBJECT ( id NUMBER, name VARCHAR ) CREATE TABLE test OF typeName (CONSTRAINT aissa PRIMARY KEY (id))
+
+  SQL 2 :
+  CREATE TABLE test(id NUMBER, name VARCHAR, CONSTRAINT aissa PRIMARY KEY (id))
+
+
+  select id,name from test;
